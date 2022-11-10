@@ -5,30 +5,7 @@ import items from "./data";
 import { useState } from "react";
 
 function App() {
-  const [category, setCategory] = useState("");
-
-  return (
-    <main>
-      <div className="container">
-        {items.map((cat) => (
-          <Categories
-            key={cat.id}
-            categories={cat.category}
-            setCategory={setCategory}
-          />
-        ))}
-      </div>
-      {category === "" ? (
-        <div>
-          {items.map((m) => (
-            <Menu key={m.id} title={m.title} />
-          ))}
-        </div>
-      ) : (
-        <div>{}</div>
-      )}
-    </main>
-  );
+  return <main></main>;
 }
 
 export default App;
