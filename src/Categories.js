@@ -1,7 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Categories = () => {
-  return <h2>categories component</h2>;
+const Categories = ({ categories, setCategory }) => {
+  const handleClick = (category) => {
+    setCategory(category);
+  };
+  return (
+    <div className="categories">
+      <button onClick={(category) => handleClick(category)}>
+        {categories}
+      </button>
+    </div>
+  );
 };
 
 export default Categories;
