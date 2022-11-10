@@ -21,11 +21,11 @@ function App() {
       {category === "" ? (
         <div>
           {items.map((m) => (
-            <Menu title={m.title} />
+            <Menu key={m.id} title={m.title} />
           ))}
         </div>
       ) : (
-        <div></div>
+        <div>{}</div>
       )}
     </main>
   );
