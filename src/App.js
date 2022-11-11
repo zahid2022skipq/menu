@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategoris] = useState([]);
+  const allCategories = new Set(items.map((item) => item.category));
 
   const filterMenuItems = (category) => {
     if (category === "all") {
