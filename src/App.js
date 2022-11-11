@@ -5,6 +5,8 @@ import items from "./data";
 import { useState } from "react";
 
 function App() {
+  const [menuItems, setMenuItems] = useState(items);
+
   return <main></main>;
 }
 
