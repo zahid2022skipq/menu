@@ -8,7 +8,15 @@ function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategoris] = useState([]);
 
-  return <main></main>;
+  return (
+    <main>
+      <section className="menu section">
+        <div className="title">
+          <h2>Our Menu</h2>
+        </div>
+      </section>
+    </main>
+  );
 }
 
 export default App;
