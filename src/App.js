@@ -4,10 +4,10 @@ import Categories from "./Categories";
 import items from "./data";
 import { useState } from "react";
 
+const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 function App() {
   const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategoris] = useState([]);
-  const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+  const [categories, setCategoris] = useState(allCategories);
 
   const filterMenuItems = (category) => {
     if (category === "all") {
@@ -26,7 +26,7 @@ function App() {
           <div className="underline"></div>
         </div>
       </section>
-      <Categories filterMenuItems={filterMenuItems} />
+      <Categories categories={categories} filterMenuItems={filterMenuItems} />
       <Menu items={menuItems} />
     </main>
   );
