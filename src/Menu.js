@@ -8,6 +8,9 @@ const Menu = ({ items }) => {
         return (
           <article key={id} className="menu-item">
             <img src={img} alt={title} className="photo" />
+            <div>
+              <header>{title}</header>
+            </div>
           </article>
         );
       })}
