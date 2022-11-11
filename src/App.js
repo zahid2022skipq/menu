@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function App() {
   const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategoris] = useState([]);
 
   return <main></main>;
 }
